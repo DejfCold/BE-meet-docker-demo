@@ -1,0 +1,15 @@
+services:
+  safe:
+    image: nginx:1.25.3-alpine
+    restart: always
+    volumes:
+      - ./safe:/usr/share/nginx/html/
+    ports:
+      - 127.0.0.1:8081:80
+  unsafe:
+    image: nginx:1.25.3-alpine
+    restart: always
+    volumes:
+      - ./unsafe:/usr/share/nginx/html/
+    ports:
+      - 8080:80

@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:16.1-alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+# username: postgres
+# password: example
+# database: postgres
